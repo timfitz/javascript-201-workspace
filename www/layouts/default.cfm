@@ -6,7 +6,7 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
-	<title>Skeleton Railo+Bootstrap+Tomcat</title>
+	<title><cfoutput>#rc.title#</cfoutput> // JavaScript 201 Workspace</title>
 
 	<link href="/resources/css/bootstrap.css" rel="stylesheet" />
 
@@ -14,6 +14,8 @@
 	<script src="/resources/js/html5shiv.js"></script>
 	<script src="/resources/js/respond.min.js"></script>
 	<![endif]-->
+
+	<script src="/resources/js/jquery.js"></script>
 </head>
 
 <body>
@@ -25,14 +27,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+				<a class="navbar-brand" href="/">JavaScript 201 Workspace</a>
 			</div>
 			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+				<cfoutput>
+					<ul class="nav navbar-nav">
+						<li<cfif rc.action EQ "main.default"> class="active"</cfif>><a href="/">Home</a></li>
+						<li<cfif rc.action EQ "main.objects"> class="active"</cfif>><a href="#buildUrl('main.objects')#">Objects</a></li>
+						<li<cfif rc.action EQ "main.arrays"> class="active"</cfif>><a href="#buildUrl('main.arrays')#">Arrays</a></li>
+						<li<cfif rc.action EQ "main.functions"> class="active"</cfif>><a href="#buildUrl('main.functions')#">Functions</a></li>
+						<li<cfif rc.action EQ "main.constructorpattern"> class="active"</cfif>><a href="#buildUrl('main.constructorpattern')#">Constructor Pattern</a></li>
+						<li<cfif rc.action EQ "main.modulepattern"> class="active"</cfif>><a href="#buildUrl('main.modulepattern')#">Module Pattern</a></li>
+					</ul>
+				</cfoutput>
 			</div>
 		</div>
 	</div>
@@ -41,8 +48,6 @@
 		<cfoutput>#body#</cfoutput>
 	</div><!-- /.container -->
 
-	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/bootstrap.js"></script>
-
 </body>
 </html>

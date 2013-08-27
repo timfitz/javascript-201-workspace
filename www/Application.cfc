@@ -6,6 +6,6 @@
 		SESOmitIndex = false
 	} />
 
-	<cfset this.name = "skeleton-railo-bootstrap-fw1" />
+	<cfset this.name = "javascript-201-workspace" />
 
 </cfcomponent>
