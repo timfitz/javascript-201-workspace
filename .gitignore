@@ -1,1 +1,2 @@
 /tomcat/logs
+/www/WEB-INF/railo/cfclasses/**/*
