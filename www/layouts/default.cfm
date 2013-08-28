@@ -27,7 +27,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">JavaScript 201 Workspace</a>
+				<a class="navbar-brand" href="/">Tim's 201 Workspace</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<cfoutput>
